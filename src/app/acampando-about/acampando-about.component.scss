@@ -1,0 +1,22 @@
+.contenedorContactenos{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 75% ;
+  }
+
+  .contenido-contactenos{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 80%;
+  }
+
+  .formulario-contacto{
+    padding: 0 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  }
+

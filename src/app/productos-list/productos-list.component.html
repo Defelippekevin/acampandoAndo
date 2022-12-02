@@ -1,0 +1,52 @@
+
+<!--
+<div class="contenedor-lista">
+    <div *ngFor="let prod of apiproductos" [ngClass]="{'oferta':prod.oferta}">
+        <div><h1>{{prod.nombre}}</h1></div> 
+        <img [src]="prod.image" [alt]="prod.nombre" class="image-drink">
+            <div class="price">
+                <p>{{prod.precio | currency}}</p>
+            </div> 
+            <div class="sin-stock"><span class="badge text-bg-warning" *ngIf="prod.stock == 0">SIN STOCK</span></div>
+            <div class="agregarCarrito">
+               <app-input-numeros [(quantity)]="prod.cantidad" [max]="prod.stock" *ngIf="prod.stock > 0" class="contenedor-cantidad"></app-input-numeros>
+                <button class="btn btn-primary btn-sm btn-agregar" (click)="addToCart(prod)" *ngIf="prod.stock > 0">Agregar al carrito</button>
+            </div>
+    </div>
+</div>
+-->
+
+
+
+
+
+
+
+<h3>Lista de productos</h3>
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th>imagen</th>
+            <th>nombre</th>
+            <th>precio</th>
+            <th>stock</th>
+            <th>cantidad</th>  
+            <th>Compra</th>  
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prod of apiproductos" [ngClass]="{'oferta':prod.oferta}">
+            <td><img [src]="prod.image" [alt]="prod.name"/></td>
+            <td>{{prod.name}}</td>
+            <td>{{prod.precio | currency}}</td>
+            <td><span class="badge text-bg-danger" *ngIf="prod.stock==0">Sin Stock</span></td>
+            <td>
+               <app-input-numeros [(quantity)]="prod.cantidad" [max]="prod.stock" *ngIf="prod.stock>0"></app-input-numeros>
+            </td>
+            <td>  
+                <button class="btn btn-outline-success" (click)="addToCart(prod)">Comprar</button>
+            </td>
+        </tr>
+    </tbody>
+</table> 
+
